@@ -10,7 +10,7 @@ byte x=0; // loop 횟수를 세기위한 전역변수
 
 void loop()
 {
-  Wire.beginTransmission(1); // 1번 슬레이브에 데이터 전송을 시작한다.
+  Wire.beginTransmission(1); // 1번 슬레이브에 데이터 전송을 시작한다.(기기의 주소값을 알아야한다.)
   Wire.write("good "); // good이라는 문자열을 전송한다.
   Wire.write(x); // good 뒤에 번호를 써서 몇번 쓰는지 확인한다.
   Wire.endTransmission(); // 전송을 끝낸다.
