@@ -3,8 +3,8 @@
 void setup()
 {
   Wire.begin(1); // Slave의 주소를 1번으로 지정해준다.
-  Wire.onRequest(requestEvent); // 데이터 전송이 완료되면 실행
-  Wire.onReceive(receiveEvent); // 전송받은 데이터를 읽을 때 사용
+  Wire.onRequest(requestEvent); // 데이터를 요청했을 때 응답하기위해 사용
+  Wire.onReceive(receiveEvent); // 데이터를 전송받을 때 
   Serial.begin(9600);
 }
 
