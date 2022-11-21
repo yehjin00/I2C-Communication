@@ -14,7 +14,7 @@ void loop()
 }
 
 void receiveEvent(int howMany){ // 
-  while(Wire.available()>1){ // 읽을 데이터가 1개 남기전까지
+  while(Wire.available()>1){
     char ch=Wire.read(); // 1byte읽고 이를 ch에 저장해라
     Serial.print(ch); // ch를 시리얼 모니터에 출력해라(Master에서 보낸 데이터)
   }
