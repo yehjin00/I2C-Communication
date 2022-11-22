@@ -17,7 +17,7 @@ void loop()
   
   delay(500); // 0.5초 기다린다. 데이터를 전송하고 요청하는데 충돌이 일어나지않기위함.
   
-  // 데이터를 보냈으면 잘 보냈다는 신호를 slave에서 받아온다.(ACK)
+  // 데이터를 보냈으면 잘 보냈다는 응답 신호를 slave에서 받아온다.(ACK)
   Wire.requestFrom(1,4); // 슬레이브 1번에서 4byte를 읽겠다고 요청한다.
   while(Wire.available()){ // 읽어올 데이터가 있으면
     char c=Wire.read(); // 1byte를 읽어서 c에 저장한다.
